@@ -81,13 +81,14 @@ export const BookActions = {
   },
   fetchBookInfo: (bookID: string | undefined) => async (dispatch: AppDispatch) => {
     try {
+      dispatch(BookActions.setIsLoading(true));
       const response = await BookService.getBookInfo(bookID);
       console.log(response.data);
       dispatch(BookActions.setBookInfo(response.data))
     } catch (e) {
 
     } finally {
-
+      dispatch(BookActions.setIsLoading(false));
     }
   }
 }
