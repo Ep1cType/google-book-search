@@ -26,7 +26,7 @@ export interface VolumeInfo {
   printType: string;
   categories: [string];
   maturityRating: string;
-  imageLinks: ImageLinks;
+  imageLinks: ImageLinks & ImageLinksForBookInfo;
   language: string;
   previewLink: string;
   infoLink: string;
@@ -36,3 +36,11 @@ export interface ImageLinks {
   smallThumbnail: string | undefined
   thumbnail: string | undefined
 }
+
+export interface ImageLinksForBookInfo extends ImageLinks {
+  extraLarge: string | undefined;
+  large: string | undefined;
+  medium: string | undefined;
+  small: string | undefined;
+}
+

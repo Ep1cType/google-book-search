@@ -1,0 +1,11 @@
+@import "src/styles/mixins";
+
+.wrapper {
+  max-width: 1188px;
+  margin: 0 auto;
+  padding: 0 39px;
+
+  @include for-tablet-portrait-only {
+    padding: 0 24px;
+  }
+}

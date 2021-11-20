@@ -1,0 +1,33 @@
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 300px;
+  padding: 15px 20px;
+  align-items: center;
+
+  &__thumbnail {
+    &__img {
+      height: 180px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__authors {
+
+  }
+
+  &__author {
+    &::after {
+      content: ", ";
+    }
+    &:last-child {
+      &::after {
+        content: '';
+      }
+    }
+  }
+}
