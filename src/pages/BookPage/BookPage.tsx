@@ -33,7 +33,7 @@ const BookPage = () => {
               <div className={s.bookCover}>
                 <img
                   className={s.bookCover__img}
-                  src={bookInfo?.volumeInfo.imageLinks.thumbnail || 'https://via.placeholder.com/128x180'}
+                  src={bookInfo?.volumeInfo.imageLinks?.thumbnail ? bookInfo?.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/128x180'}
                   alt=""
                 />
               </div>
